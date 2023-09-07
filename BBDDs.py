@@ -4,18 +4,30 @@ import sqlite3
 def ENVIARBBDD(Alumno):
     C = sqlite3.connect('ALUMNOS ITSANJUAN.db')
     cursor = C.cursor()
-    
-    NControl = Alumno.getNControl()
-    Nombre = Alumno.getNombre()
-    Semestre = Alumno.getSemestre()
-    Carrera = Alumno.getCarrera()
-    Rfc = Alumno.getRfc()
 
+    
+    NControl = (Alumno.getNControl())
+    Nombre = (Alumno.getNombre())
+    Semestre = (Alumno.getSemestre())
+    Carrera = (Alumno.getCarrera())
+    Rfc = (Alumno.getRfc())
+    
     datos = [NControl, Nombre, Semestre, Carrera, Rfc]
     print(datos)
     cursor.execute(f"INSERT INTO alumnos VALUES (?, ?, ?, ?, ?)", datos)
     C.commit()
     C.close()
+
+def Abrir():
+    C = sqlite3.connect('ALUMNOS ITSANJUAN.db')
+    cursor = C.cursor()
+    cursor.execute(f"")
+    C.close()
+
+
+
+
+
 
 
 

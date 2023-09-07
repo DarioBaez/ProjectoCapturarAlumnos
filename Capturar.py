@@ -15,7 +15,7 @@ def AlumnosCaptured():
     Rfc = input("Ingrese el RFC de alumno: ")
     
 
-    a = Alumno(Nombre, Semestre, Carrera, Rfc, NControl)
+    a = Alumno(NControl, Nombre, Semestre, Carrera, Rfc)
     ENVIARBBDD(a)
     ListALU.append(a)
 
