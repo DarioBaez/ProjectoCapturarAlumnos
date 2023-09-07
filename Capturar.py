@@ -1,24 +1,44 @@
 #Este escript busca capturar a los alumnos en una base de datos
 
+#Importamos SQLITE3 que usaremos para conectarnos a una BBDD de sqlite
+from BBDDs import ENVIARBBDD
+
+
+ListALU = []
+
 #Esta funcion solicitara los datos a capturar de los alumnos
 def AlumnosCaptured():
-    pass
+    NControl = int(input("Ingrese el NO.control del alumno: "))
+    Nombre = input("Ingrese el nombre del alumno: ")
+    Semestre = int(input("Ingrese el semestre del alumno: "))
+    Carrera = input("Ingrese la carreara del alumno: ")
+    Rfc = input("Ingrese el RFC de alumno: ")
+    
+
+    a = Alumno(Nombre, Semestre, Carrera, Rfc, NControl)
+    ENVIARBBDD(a)
+    ListALU.append(a)
 
 
 #Objeto alumno
 class Alumno():
-    def __init__(self, Nombre, Semestre, Carrera):
+    def __init__(self, NControl, Nombre, Semestre, Carrera, Rfc):
         self.Name = Nombre
         self.Semestre = Semestre
         self.Carrera = Carrera
+        self.Rfc = Rfc
+        self.NControl = NControl
     def getNombre(self):
         return self.Name
     def getSemestre(self):
         return self.Semestre
     def getCarrera(self):
         return self.Carrera
+    def getRfc(self):
+       return self.Rfc
+    def getNControl(self):
+       return self.NControl
     
 
-Alu = Alumno("Estaban",2,"ITICS")
 
 
