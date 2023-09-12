@@ -1,5 +1,4 @@
 #Este escript busca "Buscar" a los alumnos
-<<<<<<< HEAD
 from BBDDs import Select
 from Listar import Listar
 
@@ -31,6 +30,3 @@ def BuscarAlu(Opc):
         print("No existe esa opcion")
 
     Listar(ValorAdquirido)
-=======
-import BBDDs
->>>>>>> 198f7c846783c4fa10aeb998e11b91abf3d49d90
