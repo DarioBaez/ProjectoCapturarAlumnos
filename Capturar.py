@@ -4,6 +4,7 @@
 from BBDDs import ENVIARBBDD
 
 
+<<<<<<< HEAD
 #Esta funcion solicitara los datos a capturar de los alumnos
 def AlumnosCaptured():
     try:
@@ -20,6 +21,22 @@ def AlumnosCaptured():
     
 
     
+=======
+ListALU = []
+
+#Esta funcion solicitara los datos a capturar de los alumnos
+def AlumnosCaptured():
+    NControl = int(input("Ingrese el NO.control del alumno: "))
+    Nombre = input("Ingrese el nombre del alumno: ")
+    Semestre = int(input("Ingrese el semestre del alumno: "))
+    Carrera = input("Ingrese la carreara del alumno: ")
+    Rfc = input("Ingrese el RFC de alumno: ")
+    
+
+    a = Alumno(NControl, Nombre, Semestre, Carrera, Rfc)
+    ENVIARBBDD(a)
+    ListALU.append(a)
+>>>>>>> 198f7c846783c4fa10aeb998e11b91abf3d49d90
 
 
 #Objeto alumno

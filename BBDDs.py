@@ -14,6 +14,7 @@ def ENVIARBBDD(Alumno):
     
     datos = [NControl, Nombre, Semestre, Carrera, Rfc]
     print(datos)
+<<<<<<< HEAD
     try:
         cursor.execute(f"INSERT INTO alumnos VALUES (?, ?, ?, ?, ?)", datos)
         C.commit()
@@ -44,6 +45,17 @@ def Select(Columna, Valor):
     
 
     
+=======
+    cursor.execute(f"INSERT INTO alumnos VALUES (?, ?, ?, ?, ?)", datos)
+    C.commit()
+    C.close()
+
+def Abrir():
+    C = sqlite3.connect('ALUMNOS ITSANJUAN.db')
+    cursor = C.cursor()
+    cursor.execute(f"")
+    C.close()
+>>>>>>> 198f7c846783c4fa10aeb998e11b91abf3d49d90
 
 
 
@@ -51,7 +63,13 @@ def Select(Columna, Valor):
 
 
 
+<<<<<<< HEAD
 #Asi se creo la BBDD en sqlite3, Nombre de la tabla y columnas
+=======
+
+
+
+>>>>>>> 198f7c846783c4fa10aeb998e11b91abf3d49d90
 
 """
 C = sqlite3.connect('ALUMNOS ITSANJUAN.db')

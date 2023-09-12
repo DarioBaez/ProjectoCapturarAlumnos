@@ -1,4 +1,5 @@
 #Este script busca listar por carrera alos alumnos
+<<<<<<< HEAD
 from BBDDs import Select
 
 def ListarAlu():
@@ -68,3 +69,6 @@ def Listar(Valor):
 
 
     
+=======
+import BBDDs
+>>>>>>> 198f7c846783c4fa10aeb998e11b91abf3d49d90
